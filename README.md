@@ -2,6 +2,8 @@
 
 crypto scraper par @Stephane Mlv
 
+Bonne correction!
+
 * Ruby version
 5.2.1
 

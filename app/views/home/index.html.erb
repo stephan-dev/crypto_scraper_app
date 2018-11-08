@@ -5,6 +5,6 @@
       <label>Choix de la crypto</label>
 
       <%= f.collection_select :id, Rate.order(:name),:id,:name, {include_blank: false}, {class: "form-control"} %>
-      <%= f.submit %>
+      <%= f.submit "j\'ai de la chance" %>
 </div>
 <% end %>

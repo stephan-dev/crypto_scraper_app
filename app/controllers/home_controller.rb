@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
 	def initialize
-		#StartScrape.new.perform
+		#rate = Rate.new
+		if Rate.all.count < 10
+			StartScrape.new.perform
+		end
 	end
 
 	def index
