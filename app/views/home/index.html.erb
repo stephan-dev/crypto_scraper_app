@@ -1,0 +1,10 @@
+<h1>salut</h1>
+
+<%= form_for :rate, url: "show" do |f| %>
+<div class="form-group">
+      <label>Choix de la crypto</label>
+
+      <%= f.collection_select :id, Rate.order(:name),:id,:name, {include_blank: false}, {class: "form-control"} %>
+      <%= f.submit %>
+</div>
+<% end %>
