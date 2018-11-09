@@ -15,10 +15,13 @@ class StartScrape
 
       coin = Hash.new
       currency = line.xpath('td[2]/a')
-      rates = line.xpath('td[8]')
+      rates = line.xpath('td[5]/a[1]')
 
       coin['currency'] = currency.text
       coin['rates'] = rates.text
+      #puts
+      #puts coin['rates']
+      #puts
 
       list_currencies.push(coin)
    		}
@@ -29,9 +32,12 @@ class StartScrape
 
 	def save
     list_currencies = scrape
-    puts list_currencies
+    #puts list_currencies
     list_currencies.each do |hash|
-      Rate.create(name: hash['currency'], value: hash['rates'])
+      #puts
+      #puts "ceci est hash : #{hash}"
+      #puts
+    Rate.create(name: hash['currency'], value: hash['rates'])
     end
 	end
 

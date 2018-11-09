@@ -8,9 +8,9 @@ class HomeController < ApplicationController
 
 	def index
 		@rate = Rate.new
-		puts
-		puts "ceci est params dans la méthode index #{params}"
-		puts
+		#puts
+		#puts "ceci est params dans la méthode index #{params}"
+		#puts
 		rate = params[:rate]
 		#@namec = params[rate][:name]
 	end
@@ -26,9 +26,9 @@ class HomeController < ApplicationController
 
 	def result
 
-		puts
-		puts "ceci est params dans la méthode result #{params}"
-		puts
+		#puts
+		#puts "ceci est params dans la méthode result #{params}"
+		#puts
 		rate = params[:rate]
 
 		db = Rate.new
